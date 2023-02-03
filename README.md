@@ -2,8 +2,10 @@
 # Welcome to Meli Front!
 ![logo meli](https://github.com/hernnanvera/meli-challenge/blob/main/meli-front/public/icons/logo-meli.png)
 
-## Objetivo
+## Hosteado en Vercel
+https://meli-challenge-seven.vercel.app/
 
+## Objetivo
 Se debe construir una aplicación web que consta de tres componentes principales: la caja de búsqueda, la visualización de resultados, y la
 descripción del detalle del producto.
 Se debe usar el siguiente stack tecnológico para construir la aplicación:
