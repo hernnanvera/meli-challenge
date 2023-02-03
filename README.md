@@ -1,5 +1,5 @@
 
-# Welcome to Meli Front!
+# Welcome to Meli Challenge!
 ![logo meli](https://github.com/hernnanvera/meli-challenge/blob/main/meli-front/public/icons/logo-meli.png)
 
 ## Hosteado en Vercel
