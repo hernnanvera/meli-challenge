@@ -1,6 +1,6 @@
 {
-    "meliApiURL": "http://localhost:8000/api",
+    "meliApiURL": "https://meli-challenge.herokuapp.com/api",
     "canonicalBaseUrl": "",
-    "title": "",
+    "title": "Meli challenge",
     "locale": "es-AR"
 }
