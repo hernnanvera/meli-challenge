@@ -12,7 +12,6 @@ export class ItemsAPI {
     }
 
     static async loadItem(itemId: string) {
-        console.log('urk', `${this.meliApiURL}/items/${itemId}`);
         const { data } = await ItemsAPI.getItem(itemId);
         return data;
     }

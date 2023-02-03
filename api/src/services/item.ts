@@ -1,7 +1,7 @@
 import { Request, Response } from "express";
 import axios from "axios";
 import { config } from "../config/config";
-import { Currency, Item, ItemResult } from "../interfaces/item";
+import { Price, Item, ItemResult } from "../interfaces/item";
 
 
 //TODO: meter el mapeo dentro de un parser
@@ -34,15 +34,16 @@ class ItemService {
             const { data: itemDescriptionData } = await this.api.get(`${this.apiUrl}/items/${id}/description`);
 
             const [amount, decimals] = itemData.price.toString().split(".");
-            const itemCurrency: Currency = {
+
+            const itemPrice: Price = {
                 currency: itemData.currency_id,
-                amount: amount,
-                decimals: decimals,
+                amount: parseInt(amount),
+                decimals: parseInt(decimals),
             }
             const itemDetail: Item = {
                 id: itemData.id,
                 title: itemData.title,
-                price: itemCurrency,
+                price: itemPrice,
                 picture: itemData.thumbnail,
                 condition: itemData.condition,
                 free_shipping: itemData.free_shipping,

@@ -24,6 +24,7 @@
             justify-content: center;
             flex-direction: column;
             padding: 0 24px;
+            padding-bottom: 18px;
 
             p {
                 font-size: 16px;
@@ -46,7 +47,25 @@
             font-size: 24px;
         }
 
-        &__subtitle{
+        &__price {
+            display: inline-flex;
+            font-size: 14px;
+            font-family: sans-serif;
+
+            &__amount {
+                margin-top: 0;
+                font-size: 44px;
+            }
+
+            &__decimals {
+                margin-top: 0;
+                font-size: 22px;
+                line-height: 1.7;
+            }
+
+        }
+
+        &__subtitle {
             display: inline-flex;
             color: $meli-grey2;
             font-size: 14px;

@@ -3,7 +3,7 @@ export interface ItemResult {
     item : Item
 }
 
-export interface Currency {
+export interface Price {
     currency: String,
     amount: Number,
     decimals: Number,
@@ -12,7 +12,7 @@ export interface Currency {
 export interface Item {
     id: String,
     title: String,
-    price: Currency,
+    price: Price,
     picture: String,
     condition: String,
     free_shipping: Boolean,

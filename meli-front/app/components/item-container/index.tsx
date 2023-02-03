@@ -1,4 +1,5 @@
 import { Price } from "~/utils/interfaces/items"
+import { getPriceText, TRANSLATION } from "~/utils/locale"
 
 interface ItemContainerProps {
     title: string,
@@ -9,14 +10,12 @@ interface ItemContainerProps {
     price: Price
 }
 
-const TRANSLATION = {
-    new : "Nuevo"
-}
-
 export default function ItemContainer({ title, description, image, condition, soldQuantity, price }: ItemContainerProps): JSX.Element {
-    
+
     const subtitleText = `${TRANSLATION[condition]} | ${soldQuantity} vendidos`
-    
+    const decimalsText = price.decimals || "00"
+    const priceText = getPriceText(price);
+
     return (
         <>
             <div className="item-section">
@@ -34,7 +33,10 @@ export default function ItemContainer({ title, description, image, condition, so
                         <span>{subtitleText}</span>
                     </div>
                     <h1>{title}</h1>
-                    <p>{price?.amount}</p>
+                    <div className="item-section__col-2__price">
+                        <p className="item-section__col-2__price__amount">{priceText}</p>
+                        <p className="item-section__col-2__price__decimals">{decimalsText}</p>
+                    </div>
                     <div className="item-section__col-2__action-container">
                         <button>
                             <span>

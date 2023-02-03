@@ -17,7 +17,6 @@ export default function Card({ id, title, price, imageUrl, condition }: CardProp
                     <img src={imageUrl || "/images/default-image.png"} alt={title}></img>
                 </div>
                 <CardContent
-                    id={id}
                     title={title}
                     price={price}
                     condition={condition}
