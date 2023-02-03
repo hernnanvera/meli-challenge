@@ -57,9 +57,9 @@ const PlainError = (error: any) => {
   );
 }
 
-// export const CatchBoundary = () => {
-//   const error = useCatch();
-//   return PlainError(error);
-// };
+export const CatchBoundary = () => {
+  const error = useCatch();
+  return PlainError(error);
+};
 
-// export const ErrorBoundary = PlainError;
+export const ErrorBoundary = PlainError;
