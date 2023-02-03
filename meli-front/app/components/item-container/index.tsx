@@ -23,6 +23,13 @@ export default function ItemContainer({ title, description, image, condition, so
                     <div className="item-section__col-1__image-container">
                         <img src={image} alt={title}></img>
                     </div>
+                    <div className="item-section__col-1__action-container">
+                        <button>
+                            <span>
+                                Comprar ahora
+                            </span>
+                        </button>
+                    </div>
                     <div className="item-section__col-1__description-container">
                         <h2>Descripción del producto</h2>
                         <p>{description}</p>

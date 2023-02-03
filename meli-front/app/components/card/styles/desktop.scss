@@ -1,1 +1,9 @@
 @import '../components/card-content/styles/desktop.scss';
+
+@import '../components/card-content/styles/mobile.scss';
+
+.card {    
+    &__image-wrapper {
+        width: 160px;
+    }
+}

@@ -1,0 +1,18 @@
+.item-section {
+    display: grid;
+    grid-template-columns: 70% 1fr;
+
+    &__col-1 {
+        &__action-container {
+            display: none;
+        }
+    }
+
+    &__col-2 {
+        padding-top: 48px;
+        padding-right: 48px;
+        &__action-container {
+            display: block;
+        }
+    }
+}

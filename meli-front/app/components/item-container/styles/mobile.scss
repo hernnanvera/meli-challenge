@@ -1,12 +1,18 @@
 .item-section {
-    display: grid;
+    display: flex;
+    flex-direction: column-reverse;
     align-items: center;
     background-color: white;
-    grid-template-columns: 70% 1fr;
 
     &__col-1 {
         display: flex;
         flex-direction: column;
+
+        &__action-container {
+            display: block;
+            box-sizing: border-box;
+            padding: 24px;
+        }
 
         &__image-container {
             display: flex;
@@ -39,9 +45,8 @@
         display: flex;
         flex-direction: column;
         height: 100%;
-        padding-top: 48px;
-        padding-right: 48px;
-
+        padding: 24px;
+        
         h1 {
             font-family: sans-serif;
             font-size: 24px;
@@ -73,24 +78,24 @@
         }
 
         &__action-container {
-            box-sizing: border-box;
-
-            button {
-                background-color: #3483fa;
-                border-color: transparent;
-                color: #fff;
-                border-radius: 6px;
-                display: inline-block;
-                font-family: sans-serif;
-                font-size: 16px;
-                font-weight: 600;
-                height: 48px;
-                line-height: 48px;
-                padding: 0 24px;
-                text-align: center;
-                width: 100%;
-                cursor: pointer;
-            }
+            display: none;
         }
+    }
+
+    button {
+        background-color: #3483fa;
+        border-color: transparent;
+        color: #fff;
+        border-radius: 6px;
+        display: inline-block;
+        font-family: sans-serif;
+        font-size: 16px;
+        font-weight: 600;
+        height: 48px;
+        line-height: 48px;
+        padding: 0 24px;
+        text-align: center;
+        width: 100%;
+        cursor: pointer;
     }
 }

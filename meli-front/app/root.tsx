@@ -26,7 +26,7 @@ export const meta: MetaFunction = () => ({
 export function links() {
   return [
     { rel: "stylesheet", href: mobileStyles },
-    { rel: "stylesheet", href: desktopStyles, media: "(min-width: 680px)" }
+    { rel: "stylesheet", href: desktopStyles, media: "(min-width: 1024px)" }
   ];
 }
 
