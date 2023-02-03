@@ -28,25 +28,21 @@ Se debe usar el siguiente stack tecnológico para construir la aplicación:
  - Node engine >=14
   
 ## Iniciando el proyecto
-Para correr la aplicacion de manera local, primero debemos asegurarnos de instalar las dependencias necesarias.
-Correr:
+Para cada proyecto, tanto back como front, debemos seguir los mismos pasos. Primero debemos asegurarnos de instalar las dependencias necesarias:
 ```sh
 npm install
 ```
-Tanto en en proyecto meli-front como api
 
-Luego, podremos correr la aplicacion con el siguiente comando:
+Luego, podremos correr la aplicacion ejecutando el siguiente comando en cada proyecto:
 ```sh
 npm run dev
 ```
-en cada proyecto.
-
-##Metricas Core Web Vitals
 
 ## Pendientes y Próximas iteraciones
 - Breadcrumbs
 - Test unitarios
 - Test E2E (Con jest)
+- Validar form 
 - Pantalla de error
 - Meta tags para pantalla de listado
 - Lazyload para mejor rendimiento
