@@ -1,28 +1,48 @@
+import { Price } from "~/utils/interfaces/items"
+
 interface ItemContainerProps {
     title: string,
     description: string,
     image: string,
-    content: string,
+    condition: string,
+    soldQuantity: string,
+    price: Price
 }
 
-export default function ItemContainer({ title, description, image, content }: ItemContainerProps): JSX.Element {
-    const showitem = !!title;
+const TRANSLATION = {
+    new : "Nuevo"
+}
+
+export default function ItemContainer({ title, description, image, condition, soldQuantity, price }: ItemContainerProps): JSX.Element {
+    
+    const subtitleText = `${TRANSLATION[condition]} | ${soldQuantity} vendidos`
+    
     return (
         <>
             <div className="item-section">
-                {
-                    showitem ?
-                        <>
-                            <h1>{title}</h1>
-                            <h2>{description}</h2>
-                            <div className="item-section__border-line"></div>
-                            <img src={image} alt={title}></img>
-                            <p className="item-section__content">{content}</p>
-                        </> :
-                        <>
-                            <p className="item-section__not-found">No se ha encontrado el artículo solicitado</p>
-                        </>
-                }
+                <div className="item-section__col-1">
+                    <div className="item-section__col-1__image-container">
+                        <img src={image} alt={title}></img>
+                    </div>
+                    <div className="item-section__col-1__description-container">
+                        <h2>Descripción del producto</h2>
+                        <p>{description}</p>
+                    </div>
+                </div>
+                <div className="item-section__col-2">
+                    <div className="item-section__col-2__subtitle">
+                        <span>{subtitleText}</span>
+                    </div>
+                    <h1>{title}</h1>
+                    <p>{price?.amount}</p>
+                    <div className="item-section__col-2__action-container">
+                        <button>
+                            <span>
+                                Comprar ahora
+                            </span>
+                        </button>
+                    </div>
+                </div>
             </div>
 
         </>

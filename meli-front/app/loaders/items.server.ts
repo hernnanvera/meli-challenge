@@ -12,14 +12,12 @@ export class ItemsAPI {
     }
 
     static async loadItem(itemId: string) {
+        console.log('urk', `${this.meliApiURL}/items/${itemId}`);
         const { data } = await ItemsAPI.getItem(itemId);
         return data;
     }
 
     private static getItemsList(params: URLSearchParams) {
-
-        console.log('urk', `${this.meliApiURL}/items?${params.toString()}`);
-
         return getDataRequest(`${this.meliApiURL}/items?${params.toString()}`);
     }
 

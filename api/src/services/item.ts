@@ -43,7 +43,7 @@ class ItemService {
                 id: itemData.id,
                 title: itemData.title,
                 price: itemCurrency,
-                picture: itemData.thumbail,
+                picture: itemData.thumbnail,
                 condition: itemData.condition,
                 free_shipping: itemData.free_shipping,
                 sold_quantity: itemData.sold_quantity,
@@ -75,9 +75,6 @@ class ItemService {
                 });
 
             const { data: searchData } = await this.api.get(`${this.apiUrl}/sites/${this.region}/search?q=${q}&limit=${limit || this.limit}`);
-
-
-            console.log('url',`${this.apiUrl}/sites/${this.region}/search?q=${q}&limit=${limit || this.limit}`);
 
             const categories = searchData.filters.length
                 ? searchData.filters[0]?.values[0].path_from_root.map((item: { name: any; }) => item.name)

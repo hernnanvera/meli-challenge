@@ -1,4 +1,3 @@
-import { getArticleID } from "~/utils/article";
 import { Price } from "~/utils/interfaces/items";
 import CardContent from "./components/card-content";
 
@@ -11,10 +10,9 @@ interface CardProps {
 }
 
 export default function Card({ id, title, price, imageUrl, condition }: CardProps): JSX.Element {
-    const articleID = getArticleID(title) || undefined;
     return (
         <>
-            <a className="card" href={`/${articleID}`}>
+            <a className="card" href={`/${id}`}>
                 <div className="card__image-wrapper">
                     <img src={imageUrl || "/images/default-image.png"} alt={title}></img>
                 </div>

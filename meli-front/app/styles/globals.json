@@ -1,6 +1,8 @@
 {
     "meli-grey": "#ededed",
+    "meli-grey2": "#666",
     "meli-light-grey100": "#656e866b",
     "meli-light-grey200": "#656e86",
-    "meli-yellow": "#ffdb15"
+    "meli-yellow": "#ffdb15",
+    "meli-blue": "#3483fa"
 }

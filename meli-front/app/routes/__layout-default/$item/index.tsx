@@ -2,6 +2,7 @@ import { json, MetaFunction } from "@remix-run/node";
 import { useLoaderData } from "@remix-run/react";
 import { LoaderFunction } from "react-router"
 import ItemContainer from "~/components/item-container";
+import { ItemsAPI } from "~/loaders/items.server";
 
 export const meta: MetaFunction = ({ data }) => {
     // As it is a challenge exercise, we defined robots noindex, nofollow
@@ -16,15 +17,13 @@ export const meta: MetaFunction = ({ data }) => {
 
 
 export const loader: LoaderFunction = async ({ params, request }) => {
-    const urlSearchParams: URLSearchParams = new URLSearchParams();
-    // const promises = [itemTitle ? NewsAPI.loadArticle(urlSearchParams, itemTitle) : []];
-    // const [items] = await Promise.all(promises);
-    const item = {};
+    const promises = [params?.item ? ItemsAPI.loadItem(params?.item) : []];
+    const [data] = await Promise.all(promises);
     const canonicalUrl = `/${params?.item}`;
 
     return json(
         {
-            item: item,
+            item: data.item,
             canonicalUrl
         }
     )
@@ -44,10 +43,11 @@ export default function Item(): JSX.Element {
                     item &&
                     <ItemContainer
                         title={item?.title}
-                        description={item.description}
-                        image={item.urlToImage}
-                        content={item.content}
-                    />
+                        description={item?.description}
+                        image={item.picture}
+                        condition={item.condition}
+                        soldQuantity={item.sold_quantity}
+                        price={item.price} />
                 }
             </div>
         </>
