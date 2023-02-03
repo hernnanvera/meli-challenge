@@ -7,7 +7,6 @@ export default function NavSearch(): JSX.Element {
                 <input type="text" placeholder="Nunca dejes de buscar" name="search" />
                 <button ></button>
             </Form>
-
         </>
     )
 }
