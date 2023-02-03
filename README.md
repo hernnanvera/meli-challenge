@@ -1,5 +1,6 @@
 
 # Welcome to Meli Front!
+[!logo meli](https://github.com/hernnanvera/meli-challenge/blob/main/meli-front/public/icons/logo-meli.png)
 
 ## Objetivo
 
