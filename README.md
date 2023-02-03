@@ -45,6 +45,7 @@ npm run dev
 - Breadcrumbs
 - Test unitarios
 - Test E2E (Con jest)
+- Corregir estilos del buscador para safari
 - Validar form 
 - Pantalla de error
 - Meta tags para pantalla de listado
