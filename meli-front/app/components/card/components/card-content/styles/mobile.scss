@@ -1,0 +1,20 @@
+.card-content {
+    display: flex;
+    flex-direction: column;
+    padding-right: 40px;
+    padding-top: 24px;
+    min-height: 160px;
+    width:  calc(100% - 208px);
+
+    &__title {
+        h2 {
+            font-size: large;
+            font-weight: 300;
+            margin: 0;
+        }
+    }
+
+    &__price {
+        font-size: 20px;
+    }
+}

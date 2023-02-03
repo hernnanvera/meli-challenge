@@ -1,0 +1,12 @@
+@import '../../../../components/card-container/styles/mobile.scss';
+
+.items-container{
+    margin: 24px;
+    display: flex;
+    justify-content: center;
+
+    h1 {
+        font-size: 16;
+        color: $meli-light-grey200;
+    }
+}

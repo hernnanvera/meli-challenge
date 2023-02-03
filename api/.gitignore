@@ -1,0 +1,10 @@
+node_modules
+
+.cache
+.env.*
+.output
+
+/build/
+/public/build
+/api/index.js
+/api/index.js.map

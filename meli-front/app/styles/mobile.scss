@@ -1,0 +1,13 @@
+@import 'components/footer/styles/mobile.scss';
+@import 'components/header/styles/mobile.scss';
+@import 'routes/__layout-default/index/styles/mobile.scss';
+@import 'routes/__layout-default/items/styles/mobile.scss';
+
+
+body {
+    margin: 0;
+    display: grid;
+    align-content: space-between;
+    height: 100vh;
+    background-color: $meli-grey;
+}

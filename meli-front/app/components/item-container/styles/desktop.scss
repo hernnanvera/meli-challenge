@@ -1,0 +1,23 @@
+.item-section {
+    display: grid;
+    align-items: center;
+
+    h1 {
+        font-size: 40px;
+    }
+
+    h2, &__content {
+        font-size: 24px;
+        font-weight: 300;
+    }
+
+    img {
+        width: 100%;
+        height: 100%;
+    }
+
+    &__author, &__date {
+        font-size: 16px;
+        color: $meli-light-grey200;
+    }
+}
