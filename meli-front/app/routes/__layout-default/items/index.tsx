@@ -46,7 +46,6 @@ export default function Items(): JSX.Element {
 
   return (
     <div className="items-container">
-      {showTitle && <h1>{title}</h1>}
       <CardContainer itemsCards={items} />
     </div>
   );
