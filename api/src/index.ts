@@ -1,13 +1,10 @@
 import express from 'express'
 import itemRouter from './routes/index'
-import * as dotenv from "dotenv";
-
-dotenv.config({ path: __dirname+'/.env' });
 
 const app = express()
 app.use(express.json())
 
-const PORT = 8000
+const PORT = process.env.PORT || 8080;
 
 app.use('/api', itemRouter)
 
